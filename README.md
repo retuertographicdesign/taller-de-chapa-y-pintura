@@ -27,7 +27,7 @@ Todo lo marcado como `[PENDIENTE]` en `assets/config.js`:
 | Dato | Dónde |
 |---|---|
 | Teléfono y WhatsApp | `assets/config.js` |
-| Email comercial y de protección de datos | `assets/config.js` |
+| Buzón de protección de datos, si no es el mismo `info@` | `assets/config.js` |
 | Dirección o ciudad | `assets/config.js` |
 | Mecanismo de envío del formulario (`form.mode` y `form.endpoint`) | `assets/config.js` |
 | Titular, NIF y domicilio fiscal | `assets/i18n.js`, claves `aviso_p1`, `priv_p1` (marcadores `[TITULAR]`, `[NIF]`, `[DIRECCIÓN FISCAL]`) |

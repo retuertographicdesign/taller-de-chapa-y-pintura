@@ -9,8 +9,8 @@ window.SITE_CONFIG = {
   phone:        '+34 000 000 000',                     // [PENDIENTE] teléfono real
   phoneHref:    '+34000000000',                        // el mismo, sin espacios, para el enlace tel:
   whatsapp:     '34000000000',                         // [PENDIENTE] WhatsApp con prefijo, sin '+'
-  email:        'hola@tallerdechapaypintura.com',      // [PENDIENTE] email comercial
-  emailPrivacy: 'privacidad@tallerdechapaypintura.com',// [PENDIENTE] email de protección de datos
+  email:        'info@tallerdechapaypintura.es',       // buzón real (el dominio del correo es .es)
+  emailPrivacy: 'info@tallerdechapaypintura.es',       // [PENDIENTE] ¿buzón propio de protección de datos?
   address:      'Santa Cruz de Tenerife, España',      // [PENDIENTE] dirección o ciudad
 
   /* --- Redes (deja la cadena vacía para ocultar el icono) --- */
