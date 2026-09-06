@@ -219,6 +219,56 @@
       t('status_error_email') + ' <a href="mailto:' + (CFG.email || '') + '">' + (CFG.email || '') + '</a></span>';
   }
 
+  /* ---------- Envío del formulario ----------
+     El mecanismo se elige en config.js (form.mode). Sin configurar,
+     rechaza con 'form-not-configured' y la web ofrece las vías
+     alternativas de contacto.                                      */
+  function messageBody(data) {
+    return t('email_subject') + '\n\n' +
+      t('form_name') + ': ' + data.name + '\n' +
+      t('form_shop') + ': ' + data.shop + '\n' +
+      t('form_email') + ': ' + data.email + '\n' +
+      t('form_phone') + ': ' + data.phone + '\n' +
+      t('form_size') + ': ' + data.size + '\n' +
+      t('form_msg') + ': ' + (data.message || '-');
+  }
+
+  function sendForm(data) {
+    var f = CFG.form || {};
+    var payload = {};
+    Object.keys(data).forEach(function (k) { payload[k] = data[k]; });
+    Object.keys(f.extraFields || {}).forEach(function (k) { payload[k] = f.extraFields[k]; });
+    payload.body = messageBody(data);
+
+    if (f.mode === 'endpoint' && f.endpoint) {
+      var opts;
+      if (f.payload === 'form') {
+        var fd = new FormData();
+        Object.keys(payload).forEach(function (k) { fd.append(k, payload[k]); });
+        opts = { method: f.method || 'POST', body: fd, headers: { Accept: 'application/json' } };
+      } else {
+        opts = {
+          method: f.method || 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(payload),
+        };
+      }
+      return fetch(f.endpoint, opts).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res;
+      });
+    }
+
+    if (f.mode === 'mailto') {
+      window.location.href = 'mailto:' + (CFG.email || '') +
+        '?subject=' + encodeURIComponent(data.subject) +
+        '&body=' + encodeURIComponent(payload.body);
+      return Promise.resolve();
+    }
+
+    return Promise.reject(new Error('form-not-configured'));
+  }
+
   var form = document.getElementById('demoForm');
   if (form) {
     var statusEl = document.getElementById('d_status');
@@ -258,50 +308,38 @@
       if (!fieldsOk || !captchaOk || !consentOk) return;
 
       var get = function (id) { var el = document.getElementById(id); return el ? el.value : ''; };
-      var params = {
-        name: get('d_name'),
-        email: get('d_email'),
-        to_email: CFG.email || '',
+      var data = {
+        name:    get('d_name'),
+        shop:    get('d_shop'),
+        email:   get('d_email'),
+        phone:   get('d_phone'),
+        size:    get('d_size'),
+        message: get('d_message'),
         subject: t('email_subject') + ' - ' + get('d_shop'),
-        message:
-          t('email_subject') + '\n\n' +
-          t('form_name') + ': ' + get('d_name') + '\n' +
-          t('form_shop') + ': ' + get('d_shop') + '\n' +
-          t('form_email') + ': ' + get('d_email') + '\n' +
-          t('form_phone') + ': ' + get('d_phone') + '\n' +
-          t('form_size') + ': ' + get('d_size') + '\n' +
-          t('form_msg') + ': ' + (get('d_message') || '-'),
+        lang:    currentLang,
       };
 
       setStatus(statusEl, 'sending', t('status_sending'));
       if (submitBtn) submitBtn.disabled = true;
 
-      var ej = CFG.emailjs || {};
-      var configured = window.emailjs && ej.serviceId && ej.serviceId.indexOf('EMAILJS_') !== 0;
-      if (!configured) {
-        if (submitBtn) submitBtn.disabled = false;
-        setStatus(statusEl, 'error', errorStatusHTML());
-        console.warn('[Taller de Cha] EmailJS sin configurar: revisa assets/config.js');
-        return;
-      }
-
-      window.emailjs.send(ej.serviceId, ej.templateId, params)
+      sendForm(data)
         .then(function () {
           if (submitBtn) submitBtn.disabled = false;
           setStatus(statusEl, 'success', t('status_success'));
           form.reset();
         })
-        .catch(function () {
+        .catch(function (err) {
           if (submitBtn) submitBtn.disabled = false;
           setStatus(statusEl, 'error', errorStatusHTML());
+          if (err && err.message === 'form-not-configured') {
+            console.warn('[Taller de Chapa y Pintura] Envío del formulario sin configurar: revisa form.mode en assets/config.js');
+          } else {
+            console.error('[Taller de Chapa y Pintura] Error al enviar el formulario:', err);
+          }
         });
     });
   }
 
   /* ---------- Arranque ---------- */
-  var ej = (CFG.emailjs || {});
-  if (window.emailjs && ej.publicKey && ej.publicKey.indexOf('EMAILJS_') !== 0) {
-    window.emailjs.init({ publicKey: ej.publicKey });
-  }
   setLanguage(currentLang);
 })();
