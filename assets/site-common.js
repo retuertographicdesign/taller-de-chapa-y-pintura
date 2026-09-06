@@ -233,53 +233,40 @@
   }
 
   /* ---------- Envío del formulario ----------
-     El mecanismo se elige en config.js (form.mode). Sin configurar,
-     rechaza con 'form-not-configured' y la web ofrece las vías
-     alternativas de contacto.                                      */
-  function messageBody(data) {
-    return t('email_subject') + '\n\n' +
-      t('form_name') + ': ' + data.name + '\n' +
-      t('form_shop') + ': ' + data.shop + '\n' +
-      t('form_email') + ': ' + data.email + '\n' +
-      t('form_phone') + ': ' + data.phone + '\n' +
-      t('form_size') + ': ' + data.size + '\n' +
-      t('form_msg') + ': ' + (data.message || '-');
+     Va al CRM: POST multipart a <base><id>/submit con los nombres de
+     campo que define el propio formulario del CRM. El id depende del
+     tipo de formulario y del idioma activo.                          */
+  function endpointFor(kind) {
+    var f = CFG.form || {};
+    var ids = (f.ids || {})[kind] || {};
+    var id = ids[currentLang] || ids.es;
+    return (f.mode === 'endpoint' && f.base && id) ? f.base + id + '/submit' : null;
   }
 
-  function sendForm(data) {
-    var f = CFG.form || {};
-    var payload = {};
-    Object.keys(data).forEach(function (k) { payload[k] = data[k]; });
-    Object.keys(f.extraFields || {}).forEach(function (k) { payload[k] = f.extraFields[k]; });
-    payload.body = messageBody(data);
+  function sendForm(kind, data) {
+    var url = endpointFor(kind);
+    if (!url) return Promise.reject(new Error('form-not-configured'));
 
-    if (f.mode === 'endpoint' && f.endpoint) {
-      var opts;
-      if (f.payload === 'form') {
-        var fd = new FormData();
-        Object.keys(payload).forEach(function (k) { fd.append(k, payload[k]); });
-        opts = { method: f.method || 'POST', body: fd, headers: { Accept: 'application/json' } };
-      } else {
-        opts = {
-          method: f.method || 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload),
-        };
-      }
-      return fetch(f.endpoint, opts).then(function (res) {
+    var map = (CFG.form || {}).fieldMap || {};
+    var fd = new FormData();
+    fd.append('formId', url.split('/form/')[1].replace('/submit', ''));
+    Object.keys(data).forEach(function (k) {
+      fd.append(map[k] || k, data[k]);
+    });
+    fd.append('browser', JSON.stringify({
+      userAgent: navigator.userAgent,
+      language: navigator.language,
+      platform: navigator.platform,
+      origin: location.origin,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    }));
+    fd.append('location', location.href);
+
+    return fetch(url, { method: 'POST', body: fd, headers: { Accept: 'application/json' } })
+      .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         return res;
       });
-    }
-
-    if (f.mode === 'mailto') {
-      window.location.href = 'mailto:' + (CFG.email || '') +
-        '?subject=' + encodeURIComponent(data.subject) +
-        '&body=' + encodeURIComponent(payload.body);
-      return Promise.resolve();
-    }
-
-    return Promise.reject(new Error('form-not-configured'));
   }
 
   var form = document.getElementById('demoForm');
@@ -321,21 +308,23 @@
       if (!fieldsOk || !captchaOk || !consentOk) return;
 
       var get = function (id) { var el = document.getElementById(id); return el ? el.value : ''; };
+      /* El desplegable manda el texto que ve el visitante, que es
+         exactamente una de las opciones definidas en el CRM. */
+      var sizeSel = document.getElementById('d_size');
       var data = {
         name:    get('d_name'),
         shop:    get('d_shop'),
         email:   get('d_email'),
         phone:   get('d_phone'),
-        size:    get('d_size'),
+        size:    sizeSel && sizeSel.selectedIndex > 0 ? sizeSel.options[sizeSel.selectedIndex].textContent.trim() : '',
         message: get('d_message'),
-        subject: t('email_subject') + ' - ' + get('d_shop'),
-        lang:    currentLang,
+        consent: consent && consent.checked ? '1' : '',
       };
 
       setStatus(statusEl, 'sending', t('status_sending'));
       if (submitBtn) submitBtn.disabled = true;
 
-      sendForm(data)
+      sendForm(form.getAttribute('data-form-kind') || 'demo', data)
         .then(function () {
           if (submitBtn) submitBtn.disabled = false;
           setStatus(statusEl, 'success', t('status_success'));
