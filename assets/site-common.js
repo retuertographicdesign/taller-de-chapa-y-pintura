@@ -8,7 +8,12 @@
 
   var CFG = window.SITE_CONFIG || {};
   var FLAGS = { es: '🇪🇸', en: '🇬🇧' };
-  var currentLang = localStorage.getItem('tdc_lang') || (navigator.language || 'es').slice(0, 2);
+  /* Páginas como /gracias o /thank-you existen en un solo idioma y lo
+     fijan con <body data-lang-lock="es|en">; el resto recuerda la
+     elección del visitante. */
+  var langLock = document.body.getAttribute('data-lang-lock');
+  var langAlt = document.body.getAttribute('data-lang-alt');
+  var currentLang = langLock || localStorage.getItem('tdc_lang') || (navigator.language || 'es').slice(0, 2);
   if (!I18N[currentLang]) currentLang = 'es';
 
   function t(key) {
@@ -155,7 +160,7 @@
 
   function setLanguage(lang) {
     currentLang = lang;
-    localStorage.setItem('tdc_lang', lang);
+    if (!langLock) localStorage.setItem('tdc_lang', lang);
     applyTranslations(lang);
     applyContactData();
   }
@@ -169,7 +174,15 @@
     });
     document.querySelectorAll('.lang-menu button').forEach(function (b) {
       b.addEventListener('click', function () {
-        setLanguage(b.getAttribute('data-lang'));
+        var lang = b.getAttribute('data-lang');
+        /* En una página de un solo idioma, cambiar de idioma es ir a su
+           equivalente, no traducir la página a medias. */
+        if (langLock && langAlt && lang !== langLock) {
+          localStorage.setItem('tdc_lang', lang);
+          location.href = langAlt;
+          return;
+        }
+        setLanguage(lang);
         langSwitch.classList.remove('open');
       });
     });
