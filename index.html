@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taller de Cha · Software de gestión para talleres de chapa y pintura</title>
+<meta name="description" content="Software para talleres de chapa y pintura: recepción con firma digital, peritaje de daños sobre esquema visual, fotos y vídeos, seguimiento en tiempo real, vehículos de cortesía y entrega. Cuota plana por taller.">
+<meta name="theme-color" content="#151A21">
+<link rel="canonical" href="https://tallerdecha.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Taller de Cha">
+<meta property="og:title" content="Taller de Cha · Del parte a la entrega, todo el taller en una pantalla">
+<meta property="og:description" content="Recepción con firma digital, daños sobre el esquema del vehículo, seguimiento en tiempo real y portal de cliente. Cuota plana por taller, sin coste por usuario.">
+<meta property="og:url" content="https://tallerdecha.com/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23C62828'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-size='58' font-weight='700' fill='%23fff' font-family='Helvetica,Arial,sans-serif'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Taller de Cha",
+  "applicationCategory":"BusinessApplication",
+  "operatingSystem":"Web",
+  "description":"Software de gestión integral para talleres de chapa y pintura: recepción con firma digital, peritaje de daños, seguimiento en tiempo real, vehículos de cortesía y entrega.",
+  "offers":{"@type":"Offer","price":"99","priceCurrency":"EUR","description":"Suscripción mensual por taller, usuarios ilimitados"}
+}
+</script>
+</head>
+<body>
+
+<!-- ======================= CABECERA ======================= -->
+<header id="site-header">
+  <div class="wrap">
+    <nav aria-label="Navegación principal">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </span>
+        <span class="brand-text">Taller de Cha<small>Chapa y pintura</small></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#producto" data-i18n="nav_producto">Producto</a></li>
+        <li><a href="#como-funciona" data-i18n="nav_como">Cómo funciona</a></li>
+        <li><a href="#precios" data-i18n="nav_precios">Precios</a></li>
+        <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+        <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+        <li><a href="#contacto" class="btn" data-i18n="nav_demo">Solicitar demo</a></li>
+      </ul>
+
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar idioma">
+          <span class="flag" id="langFlag">🇪🇸</span><span id="langCode">ES</span>
+        </button>
+        <div class="lang-menu" role="menu">
+          <button data-lang="es" role="menuitem"><span class="flag">🇪🇸</span> Español</button>
+          <button data-lang="en" role="menuitem"><span class="flag">🇬🇧</span> English</button>
+        </div>
+      </div>
+
+      <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-tag" data-i18n="hero_tag">Software para talleres de chapa y pintura</span>
+        <h1>
+          <span data-i18n="hero_h1a">Del parte a la entrega,</span>
+          <span class="accent" data-i18n="hero_h1b">todo el taller en una pantalla</span>
+        </h1>
+        <p class="lead" data-i18n="hero_lead">Recepción con firma digital, daños sobre el esquema del vehículo, fotos y vídeos, seguimiento en tiempo real, vehículos de cortesía y entrega. Un solo sistema, sin papeles sueltos ni llamadas para preguntar «¿cómo va lo mío?».</p>
+        <div class="hero-ctas">
+          <a href="#contacto" class="btn amber" data-i18n="hero_cta1">Solicitar una demo</a>
+          <a href="#como-funciona" class="btn outline" data-i18n="hero_cta2">Ver cómo funciona</a>
+        </div>
+        <p class="hero-note" data-i18n="hero_note">Sin permanencia · Alta en menos de una semana · Tus datos en la UE</p>
+
+        <div class="hero-stats">
+          <div class="st"><strong data-i18n="stat1_v">30%</strong><span data-i18n="stat1_l">Menos tiempo de reparación</span></div>
+          <div class="st"><strong data-i18n="stat2_v">24/7</strong><span data-i18n="stat2_l">Seguimiento en tiempo real para el cliente</span></div>
+          <div class="st"><strong data-i18n="stat3_v">100%</strong><span data-i18n="stat3_l">Recepciones con firma digital</span></div>
+        </div>
+      </div>
+
+      <!-- Representación del panel de la aplicación -->
+      <div class="hero-mock" aria-hidden="true">
+        <div class="mock-bar">
+          <i></i><i></i><i></i>
+          <span class="mock-url">app.tallerdecha.com</span>
+        </div>
+        <div class="mock-screen">
+          <div class="mock-row">
+            <h4 data-i18n="mock_title">Reparaciones activas</h4>
+            <span class="mock-pill" data-i18n="mock_pill">En tiempo real</span>
+          </div>
+          <div class="mock-kpis">
+            <div class="mock-kpi"><b data-i18n="mock_k1">18</b><span data-i18n="mock_k1l">Activas</span></div>
+            <div class="mock-kpi"><b data-i18n="mock_k2">4,2 d</b><span data-i18n="mock_k2l">Media</span></div>
+            <div class="mock-kpi"><b data-i18n="mock_k3">96%</b><span data-i18n="mock_k3l">A tiempo</span></div>
+          </div>
+          <div class="mock-list">
+            <div class="mock-item">
+              <span class="veh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14M6 17l-1-5 2-5h10l2 5-1 5"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span>
+              <span class="meta"><b data-i18n="mock_i1">1234 ABC · Golf VII</b><span data-i18n="mock_i1s">Cabina de pintura</span></span>
+              <span class="prog"><i style="width:68%"></i></span>
+            </div>
+            <div class="mock-item">
+              <span class="veh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14M6 17l-1-5 2-5h10l2 5-1 5"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span>
+              <span class="meta"><b data-i18n="mock_i2">5678 DEF · Ibiza</b><span data-i18n="mock_i2s">Esperando pieza</span></span>
+              <span class="prog"><i style="width:35%"></i></span>
+            </div>
+            <div class="mock-item">
+              <span class="veh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14M6 17l-1-5 2-5h10l2 5-1 5"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span>
+              <span class="meta"><b data-i18n="mock_i3">9012 GHI · Kadjar</b><span data-i18n="mock_i3s">Listo para entrega</span></span>
+              <span class="prog"><i style="width:100%"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FRANJA DE VALOR ======================= -->
+<section class="valuestrip">
+  <div class="wrap">
+    <span class="vs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><span data-i18n="vs1">Multiempresa y marca propia</span></span>
+    <span class="vs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span data-i18n="vs2">Cuota plana por taller</span></span>
+    <span class="vs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6 4.6 1.9-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/></svg><span data-i18n="vs3">IA incluida, no como extra</span></span>
+    <span class="vs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8.4-8 9.5-4.8-1.1-8-5-8-9.5V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg><span data-i18n="vs4">Cumple RGPD</span></span>
+  </div>
+</section>
+
+<!-- ======================= EL PROBLEMA ======================= -->
+<section class="intro">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <span class="eyebrow" data-i18n="intro_eyebrow">El día a día del taller</span>
+        <h2 class="section-title"><span data-i18n="intro_t1">El problema no es reparar.</span> <span class="accent" data-i18n="intro_t2">Es todo lo que hay alrededor.</span></h2>
+        <p data-i18n="intro_p1">Partes en papel que se pierden, fotos del daño repartidas por varios móviles, un cliente que llama tres veces para saber si su coche está listo y un vehículo de cortesía que nadie sabe quién tiene.</p>
+        <p data-i18n="intro_p2">Taller de Cha ordena ese ciclo completo en un único sistema: cada vehículo tiene su ficha, su firma, sus daños, sus fotos y su estado — y el cliente lo ve solo, sin llamar.</p>
+        <div class="intro-badge">
+          <strong data-i18n="intro_badge_v">30%</strong>
+          <span data-i18n="intro_badge_l">menos tiempo de reparación al ordenar el ciclo completo</span>
+        </div>
+      </div>
+
+      <ul class="pain-list">
+        <li class="pain">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+          <span><b data-i18n="pain1_t">Recepciones en papel</b><span data-i18n="pain1_p">Partes que se rellenan a mano, se archivan mal y no sirven si hay una reclamación.</span></span>
+        </li>
+        <li class="pain">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+          <span><b data-i18n="pain2_t">Daños sin prueba</b><span data-i18n="pain2_p">Fotos del antes y el después dispersas en móviles y WhatsApp, sin trazabilidad.</span></span>
+        </li>
+        <li class="pain">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><b data-i18n="pain3_t">El teléfono no para</b><span data-i18n="pain3_p">Llamadas constantes preguntando por el estado de la reparación.</span></span>
+        </li>
+        <li class="pain">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l-1-5 2-5h10l2 5-1 5"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span>
+          <span><b data-i18n="pain4_t">Cortesía descontrolada</b><span data-i18n="pain4_p">Vehículos de sustitución asignados sin registro de quién los tiene ni desde cuándo.</span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CARACTERÍSTICAS ======================= -->
+<section class="features" id="producto">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="feat_eyebrow">Producto</span>
+      <h2 class="section-title"><span data-i18n="feat_t1">Todo lo que un taller necesita,</span> <span class="accent" data-i18n="feat_t2">y nada que no use</span></h2>
+      <p class="section-lead" data-i18n="feat_lead">Ocho módulos pensados desde el mostrador de recepción, no desde una hoja de cálculo.</p>
+    </div>
+
+    <div class="feat-grid">
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 3 2"/><path d="M12 3v8"/><path d="m8.5 7.5 3.5-4 3.5 4"/></svg></span>
+        <h3 data-i18n="f1_t">Recepción con firma digital</h3>
+        <p data-i18n="f1_p">El cliente firma en tablet o móvil. El parte queda sellado, con fecha y guardado en la ficha del vehículo.</p>
+      </article>
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l-1-5 2-5h10l2 5-1 5"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M13 8.5 11 12"/></svg></span>
+        <h3 data-i18n="f2_t">Daños sobre el esquema</h3>
+        <p data-i18n="f2_p">Marca golpes, rayones y deformaciones sobre un esquema visual del vehículo. Tipo, zona y gravedad, en segundos.</p>
+      </article>
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 11 6-3v8l-6-3z"/></svg></span>
+        <h3 data-i18n="f3_t">Fotos y vídeos</h3>
+        <p data-i18n="f3_p">Documenta el estado de entrada y cada fase de la reparación. Todo queda asociado a la orden, no a un móvil.</p>
+      </article>
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h3 data-i18n="f4_t">Seguimiento de estado</h3>
+        <p data-i18n="f4_p">Cada reparación avanza por fases visibles para todo el taller: peritaje, chapa, pintura, montaje, control.</p>
+      </article>
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h11M4 16l-.8-4 1.6-4h8l1.6 4-.8 4"/><circle cx="6" cy="16.5" r="1.5"/><circle cx="12" cy="16.5" r="1.5"/><path d="M17 8h4v8h-3"/><path d="M19 5v3"/></svg></span>
+        <h3 data-i18n="f5_t">Vehículos de cortesía</h3>
+        <p data-i18n="f5_p">Flota de sustitución con disponibilidad, asignación a una reparación concreta y registro de entrega y devolución.</p>
+      </article>
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M10 18h4"/><path d="M8 7h8M8 10.5h5"/></svg></span>
+        <h3 data-i18n="f6_t">Portal del cliente</h3>
+        <p data-i18n="f6_p">Un enlace privado donde el cliente ve el estado, las fotos y la fecha estimada. Sin app, sin registro.</p>
+      </article>
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6 4.6 1.9-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3z"/><path d="M18 15l.7 1.8L20.5 18l-1.8.7L18 21l-.7-2.3-1.8-.7 1.8-.7z"/></svg></span>
+        <h3 data-i18n="f7_t">Asistente de IA</h3>
+        <p data-i18n="f7_p">Consulta por voz o chat el estado de cualquier vehículo, redacta el parte y resume la orden de trabajo.</p>
+      </article>
+      <article class="feat-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2.5 2.5L16 8"/><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 4v5h-5"/></svg></span>
+        <h3 data-i18n="f8_t">Entrega y cierre</h3>
+        <p data-i18n="f8_p">Checklist de entrega, conformidad firmada y expediente completo archivado para futuras reclamaciones.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CÓMO FUNCIONA ======================= -->
+<section class="flow" id="como-funciona">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="flow_eyebrow">Cómo funciona</span>
+      <h2 class="section-title"><span data-i18n="flow_t1">Seis etapas.</span> <span class="accent" data-i18n="flow_t2">Un solo expediente.</span></h2>
+      <p class="section-lead" data-i18n="flow_lead">El vehículo entra una vez y no se sale del sistema hasta que el cliente firma la entrega.</p>
+    </div>
+
+    <ol class="flow-grid">
+      <li class="step">
+        <span class="num">1</span>
+        <h3 data-i18n="s1_t">Recepción</h3>
+        <p data-i18n="s1_p">Alta del vehículo por matrícula, datos del cliente y del seguro. El cliente firma digitalmente el parte de entrada.</p>
+        <span class="tagline" data-i18n="s1_tag">Firma digital</span>
+      </li>
+      <li class="step">
+        <span class="num">2</span>
+        <h3 data-i18n="s2_t">Peritaje de daños</h3>
+        <p data-i18n="s2_p">Se marcan los daños sobre el esquema del vehículo y se documentan con fotos y vídeos del estado real de entrada.</p>
+        <span class="tagline" data-i18n="s2_tag">Esquema visual</span>
+      </li>
+      <li class="step">
+        <span class="num">3</span>
+        <h3 data-i18n="s3_t">Cortesía</h3>
+        <p data-i18n="s3_p">Si procede, se asigna un vehículo de sustitución desde la flota, con registro de entrega, kilómetros y fecha de devolución.</p>
+        <span class="tagline" data-i18n="s3_tag">Flota controlada</span>
+      </li>
+      <li class="step">
+        <span class="num">4</span>
+        <h3 data-i18n="s4_t">Reparación</h3>
+        <p data-i18n="s4_p">El trabajo avanza por fases. Cada cambio de estado y cada foto nueva actualizan el expediente al instante.</p>
+        <span class="tagline" data-i18n="s4_tag">Trazabilidad</span>
+      </li>
+      <li class="step">
+        <span class="num">5</span>
+        <h3 data-i18n="s5_t">El cliente lo ve solo</h3>
+        <p data-i18n="s5_p">El portal se actualiza en tiempo real: fase actual, fotos del avance y fecha estimada de entrega. Menos llamadas.</p>
+        <span class="tagline" data-i18n="s5_tag">Tiempo real</span>
+      </li>
+      <li class="step">
+        <span class="num">6</span>
+        <h3 data-i18n="s6_t">Entrega</h3>
+        <p data-i18n="s6_p">Checklist final, conformidad del cliente firmada y expediente cerrado con todo el histórico documental.</p>
+        <span class="tagline" data-i18n="s6_tag">Expediente cerrado</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= PORTAL + IA ======================= -->
+<section class="dark-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="dark_eyebrow">Diferencial</span>
+      <h2 class="section-title"><span data-i18n="dark_t1">Dos cosas que el resto</span> <span class="accent" data-i18n="dark_t2">cobra aparte</span></h2>
+      <p class="section-lead" data-i18n="dark_lead">El portal del cliente y el asistente de IA no son un módulo premium: vienen incluidos.</p>
+    </div>
+
+    <div class="duo">
+      <article class="duo-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M10 18h4"/><path d="M8.5 8.5 11 11l4.5-4.5"/></svg></span>
+        <h3 data-i18n="d1_t">Portal del cliente en tiempo real</h3>
+        <p data-i18n="d1_p">Cada reparación genera un enlace privado. El cliente entra desde el móvil y ve exactamente en qué punto está su vehículo.</p>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d1_l1">Estado y fase actual de la reparación</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d1_l2">Fotos y vídeos del avance real</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d1_l3">Fecha estimada de entrega, actualizada</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d1_l4">Sin app, sin registro, sin contraseñas</span></li>
+        </ul>
+      </article>
+
+      <article class="duo-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg></span>
+        <h3 data-i18n="d2_t">Asistente de IA por voz y chat</h3>
+        <p data-i18n="d2_p">Pregunta en voz alta por cualquier vehículo mientras tienes las manos ocupadas. El asistente responde, redacta y resume.</p>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d2_l1">«¿Cómo va el 1234 ABC?» — respuesta al momento</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d2_l2">Redacción automática del parte de recepción</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d2_l3">Resumen de la orden de trabajo</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="d2_l4">Incluido en el precio, o BYOK con tu propia clave sin coste</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRECIOS ======================= -->
+<section class="pricing" id="precios">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="pr_eyebrow">Precios</span>
+      <h2 class="section-title"><span data-i18n="pr_t1">Cuota plana por taller.</span> <span class="accent" data-i18n="pr_t2">Sin coste por usuario.</span></h2>
+      <p class="section-lead" data-i18n="pr_lead">Da de alta a todo tu equipo sin que suba la factura. Sin permanencia y con tus datos alojados en la UE.</p>
+    </div>
+
+    <div class="price-grid">
+      <article class="price-card">
+        <h3 data-i18n="p1_n">Taller</h3>
+        <p class="who" data-i18n="p1_w">Talleres independientes de una sola sede.</p>
+        <div class="amount"><b data-i18n="p1_a">99</b><span>€/mes</span></div>
+        <p class="per" data-i18n="p1_per">por taller y mes, IVA no incluido</p>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p1_f1">Usuarios ilimitados</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p1_f2">Recepción con firma digital</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p1_f3">Esquema visual de daños</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p1_f4">Fotos y vídeos por orden</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p1_f5">Seguimiento de estado</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p1_f6">Soporte por email</span></li>
+        </ul>
+        <a href="#contacto" class="btn ghost" data-i18n="pr_cta">Solicitar una demo</a>
+      </article>
+
+      <article class="price-card featured">
+        <span class="flag" data-i18n="p2_flag">El más elegido</span>
+        <h3 data-i18n="p2_n">Profesional</h3>
+        <p class="who" data-i18n="p2_w">Talleres en crecimiento que quieren que el cliente no llame.</p>
+        <div class="amount"><b data-i18n="p2_a">179</b><span>€/mes</span></div>
+        <p class="per" data-i18n="p2_per">por taller y mes, IVA no incluido</p>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p2_f1">Todo lo del plan Taller</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p2_f2">Portal del cliente en tiempo real</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p2_f3">Vehículos de cortesía</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p2_f4">Asistente de IA por voz y chat</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p2_f5">Marca propia en el portal</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p2_f6">Soporte prioritario</span></li>
+        </ul>
+        <a href="#contacto" class="btn" data-i18n="pr_cta">Solicitar una demo</a>
+      </article>
+
+      <article class="price-card">
+        <h3 data-i18n="p3_n">Grupos</h3>
+        <p class="who" data-i18n="p3_w">Grupos multi-taller y concesionarios multi-marca.</p>
+        <div class="amount"><b data-i18n="p3_a">A medida</b></div>
+        <p class="per" data-i18n="p3_per">según número de sedes y volumen</p>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p3_f1">Todo lo del plan Profesional</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p3_f2">Multiempresa con instancias aisladas</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p3_f3">Panel consolidado de grupo</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p3_f4">Integraciones a medida</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p3_f5">Formación del equipo incluida</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p3_f6">Gestor de cuenta asignado</span></li>
+        </ul>
+        <a href="#contacto" class="btn ghost" data-i18n="pr_cta3">Hablar con ventas</a>
+      </article>
+    </div>
+
+    <p class="price-note" data-i18n="pr_note">Precios de referencia sobre una suscripción mensual por taller. Confírmanos tu caso y te pasamos la propuesta cerrada, sin compromiso.</p>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="faq" id="faq">
+  <div class="wrap-sm">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="faq_eyebrow">Dudas frecuentes</span>
+      <h2 class="section-title"><span data-i18n="faq_t1">Lo que suelen</span> <span class="accent" data-i18n="faq_t2">preguntarnos</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="q1">¿Cuánto se tarda en ponerlo en marcha?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a1">El alta y la configuración inicial se hacen en menos de una semana.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="q2">¿Tengo que pagar por cada mecánico que use el sistema?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a2">No. La cuota es plana por taller y los usuarios son ilimitados.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="q3">¿La firma digital tiene validez?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a3">La firma se captura junto a la fecha, la hora y el expediente concreto que se está firmando.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="q4">¿El asistente de IA es un extra de pago?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a4">No. Viene incluido en el plan Profesional.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="q5">¿Qué pasa con los datos de mis clientes?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a5">Cada taller trabaja sobre su propia instancia aislada dentro de la plataforma.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="q6">¿Funciona en tablet y en el móvil del taller?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a6">Sí. La recepción, el marcado de daños y la subida de fotos están pensados para tablet y móvil.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONTACTO ======================= -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow" data-i18n="ct_eyebrow">Contacto</span>
+        <h2 class="section-title"><span data-i18n="ct_t1">Te lo enseñamos</span> <span class="accent" data-i18n="ct_t2">en 20 minutos</span></h2>
+        <p class="section-lead" data-i18n="ct_lead">Una demo corta, con tu caso concreto encima de la mesa: cuántas entradas tienes al mes, cómo trabajas ahora y qué te está costando más tiempo.</p>
+
+        <ul class="info-list">
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><strong data-i18n="ct_addr_l">Dónde estamos</strong><span data-cfg-address>Santa Cruz de Tenerife, España</span></span>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <span><strong data-i18n="ct_phone_l">Teléfono</strong><a data-cfg-phone href="tel:">+34 000 000 000</a></span>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+            <span><strong data-i18n="ct_mail_l">Email</strong><a data-cfg-email href="mailto:">hola@tallerdecha.com</a></span>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span><strong data-i18n="ct_hours_l">Horario de atención</strong><span data-i18n="ct_hours_v">Lunes a viernes, de 9:00 a 18:00</span></span>
+          </li>
+        </ul>
+
+        <div class="quick-actions">
+          <a class="btn ghost" data-cfg-tel href="tel:"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-i18n="ct_call">Llamar ahora</span></a>
+          <a class="btn ghost" data-cfg-wa href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14 3.5 13 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg><span data-i18n="ct_wa">Escribir por WhatsApp</span></a>
+        </div>
+
+        <div class="trust-mini">
+          <p class="t-title" data-i18n="trust_t">Antes de la demo</p>
+          <ul>
+            <li><span data-i18n="trust_1">No pedimos tarjeta ni compromiso de permanencia.</span></li>
+            <li><span data-i18n="trust_2">Te enseñamos el producto real, no un vídeo grabado.</span></li>
+            <li><span data-i18n="trust_3">Si no encaja con tu taller, te lo decimos.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3 data-i18n="form_title">Solicita tu demo</h3>
+        <p class="note" data-i18n="form_note">Rellena el formulario y te escribimos para cuadrar una demo. Si prefieres ir directo, llámanos o escríbenos por WhatsApp.</p>
+
+        <form id="demoForm" novalidate>
+          <div class="form-row">
+            <div>
+              <label for="d_name" data-i18n="form_name">Nombre y apellidos</label>
+              <input type="text" id="d_name" name="name" autocomplete="name">
+              <span class="field-error" id="d_name_err"></span>
+            </div>
+            <div>
+              <label for="d_shop" data-i18n="form_shop">Nombre del taller</label>
+              <input type="text" id="d_shop" name="shop" autocomplete="organization">
+              <span class="field-error" id="d_shop_err"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="d_email" data-i18n="form_email">Email</label>
+              <input type="email" id="d_email" name="email" autocomplete="email">
+              <span class="field-error" id="d_email_err"></span>
+            </div>
+            <div>
+              <label for="d_phone" data-i18n="form_phone">Teléfono</label>
+              <input type="tel" id="d_phone" name="phone" autocomplete="tel" data-i18n-ph="form_phone_ph" placeholder="Ej: 600123456">
+              <span class="field-error" id="d_phone_err"></span>
+            </div>
+          </div>
+
+          <div class="full">
+            <label for="d_size" data-i18n="form_size">Entradas al mes</label>
+            <select id="d_size" name="size">
+              <option value="" data-i18n="form_size_ph">Selecciona una opción</option>
+              <option value="&lt;30" data-i18n="form_size_1">Menos de 30</option>
+              <option value="30-80" data-i18n="form_size_2">Entre 30 y 80</option>
+              <option value="80-200" data-i18n="form_size_3">Entre 80 y 200</option>
+              <option value="&gt;200" data-i18n="form_size_4">Más de 200</option>
+            </select>
+            <span class="field-error" id="d_size_err"></span>
+          </div>
+
+          <div class="full">
+            <label for="d_message" data-i18n="form_msg">Cuéntanos tu caso (opcional)</label>
+            <textarea id="d_message" name="message" data-i18n-ph="form_msg_ph" placeholder="Cómo gestionáis ahora las recepciones, qué os gustaría resolver..."></textarea>
+          </div>
+
+          <div class="form-captcha">
+            <label for="d_captcha" data-i18n="captcha_label">Para confirmar que eres una persona: ¿cuánto suman tres más cuatro? (en cifra)</label>
+            <input type="text" id="d_captcha" autocomplete="off" data-i18n-ph="captcha_ph" placeholder="Tu respuesta">
+            <span class="captcha-msg err" id="d_captcha_msg" data-i18n="captcha_err">Respuesta incorrecta, inténtalo de nuevo.</span>
+          </div>
+
+          <div class="form-consent">
+            <input type="checkbox" id="d_consent">
+            <label for="d_consent">
+              <span data-i18n="consent_a">He leído y acepto la</span>
+              <button type="button" class="inline-link" data-legal-tab="privacidad" data-i18n="consent_b">política de privacidad</button>
+              <span data-i18n="consent_c">y el tratamiento de mis datos para gestionar esta solicitud.</span>
+            </label>
+          </div>
+          <span class="field-error" id="d_consent_err"></span>
+
+          <button type="submit" class="btn amber" data-i18n="form_submit">Enviar solicitud de demo</button>
+          <div class="form-status" id="d_status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL ======================= -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2 data-i18n="cta_t">Ordena el taller antes de la próxima entrada</h2>
+    <p data-i18n="cta_p">Te enseñamos en 20 minutos cómo quedaría tu ciclo completo dentro del sistema, con tus propios números.</p>
+    <a href="#contacto" class="btn" data-i18n="cta_btn">Solicitar una demo</a>
+  </div>
+</section>
+
+<!-- ======================= PIE ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="f-brand">
+        <a class="brand" href="#top">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </span>
+          <span class="brand-text">Taller de Cha<small>Chapa y pintura</small></span>
+        </a>
+        <p class="f-desc" data-i18n="f_desc">Software de gestión integral para talleres de chapa y pintura: recepción digital, peritaje de daños, seguimiento en tiempo real, vehículos de cortesía y entrega.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="f_col1">Producto</h4>
+        <ul>
+          <li><a href="#producto" data-i18n="f_l_feat">Características</a></li>
+          <li><a href="#como-funciona" data-i18n="f_l_flow">Cómo funciona</a></li>
+          <li><a href="#precios" data-i18n="f_l_price">Precios</a></li>
+          <li><a href="#faq" data-i18n="f_l_faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="f_col2">Compañía</h4>
+        <ul>
+          <li><a href="#contacto" data-i18n="f_l_demo">Solicitar demo</a></li>
+          <li><a data-cfg-email href="mailto:">hola@tallerdecha.com</a></li>
+          <li><button type="button" data-legal-tab="aviso" data-i18n="f_legal">Aviso legal</button></li>
+          <li><button type="button" data-legal-tab="privacidad" data-i18n="f_priv">Política de privacidad</button></li>
+          <li><button type="button" data-legal-tab="cookies" data-i18n="f_cook">Política de cookies</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Taller de Cha · <span data-i18n="f_rights">Todos los derechos reservados.</span></span>
+      <div class="socials">
+        <a data-cfg-social="linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.5 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.32-2.02-3.32-2.02 0-2.33 1.58-2.33 3.21V21H9z"/></svg></a>
+        <a data-cfg-social="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= MODAL LEGAL ======================= -->
+<div class="legal-modal" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+  <div class="legal-box">
+    <div class="legal-head">
+      <h3 id="legalTitle" data-i18n="legal_title">Información legal</h3>
+      <button class="legal-close" id="legalClose" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="legal-tabs">
+      <button class="legal-tab active" data-legal-panel="aviso" data-i18n="f_legal">Aviso legal</button>
+      <button class="legal-tab" data-legal-panel="privacidad" data-i18n="f_priv">Política de privacidad</button>
+      <button class="legal-tab" data-legal-panel="cookies" data-i18n="f_cook">Política de cookies</button>
+    </div>
+    <div class="legal-body">
+      <div class="legal-panel active" id="legalPanelAviso">
+        <h4 data-i18n="aviso_h">Aviso legal</h4>
+        <p data-i18n="aviso_p1"></p>
+        <p data-i18n="aviso_p2"></p>
+        <p data-i18n="aviso_p3"></p>
+        <p data-i18n="aviso_p4"></p>
+      </div>
+      <div class="legal-panel" id="legalPanelPrivacidad">
+        <h4 data-i18n="priv_h1"></h4>
+        <p data-i18n="priv_p1"></p>
+        <h4 data-i18n="priv_h2"></h4>
+        <ul>
+          <li data-i18n="priv_l1"></li>
+          <li data-i18n="priv_l2"></li>
+          <li data-i18n="priv_l3"></li>
+          <li data-i18n="priv_l4"></li>
+        </ul>
+        <h4 data-i18n="priv_h3"></h4>
+        <p data-i18n="priv_p2"></p>
+        <h4 data-i18n="priv_h4"></h4>
+        <p data-i18n="priv_p3"></p>
+        <h4 data-i18n="priv_h5"></h4>
+        <p data-i18n="priv_p4"></p>
+        <h4 data-i18n="priv_h6"></h4>
+        <p data-i18n="priv_p5"></p>
+      </div>
+      <div class="legal-panel" id="legalPanelCookies">
+        <h4 data-i18n="cook_h1"></h4>
+        <p data-i18n="cook_p1"></p>
+        <h4 data-i18n="cook_h2"></h4>
+        <p data-i18n="cook_p2"></p>
+        <h4 data-i18n="cook_h3"></h4>
+        <ul>
+          <li data-i18n="cook_l1"></li>
+          <li data-i18n="cook_l2"></li>
+          <li data-i18n="cook_l3"></li>
+        </ul>
+        <h4 data-i18n="cook_h4"></h4>
+        <p data-i18n="cook_p3"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="assets/config.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/site-common.js"></script>
+</body>
+</html>
