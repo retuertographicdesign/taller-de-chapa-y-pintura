@@ -70,5 +70,19 @@ python3 -m http.server 4173
 
 ## Despliegue
 
-GitHub Pages desde la rama `main`, carpeta raíz. Para un dominio propio, añadir
-un archivo `CNAME` con el dominio y apuntar los DNS a GitHub Pages.
+GitHub Pages desde la rama `main`, carpeta raíz. El dominio es
+**www.tallerdechapaypintura.com**, declarado en el archivo `CNAME`.
+
+DNS necesarios en el registrador del dominio:
+
+| Tipo | Nombre | Valor |
+|---|---|---|
+| CNAME | `www` | `retuertographicdesign.github.io.` |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+
+Los registros `A` del dominio raíz hacen que `tallerdechapaypintura.com` redirija
+a la versión con `www`. En GitHub: Settings › Pages › Custom domain con el
+dominio, y marcar «Enforce HTTPS» cuando el certificado esté emitido.
